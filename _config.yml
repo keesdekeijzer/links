@@ -1,0 +1,16 @@
+title: Links
+logo: /assets/img/logo2.png
+description: Sjabloon voor een website met links
+show_downloads: true
+google_analytics:
+theme: jekyll-theme-minimal
+author: Kees de Keijzer
+github_username: keesdekeijzer
+plugins:
+  # Other plugins go here
+ - jekyll-paginate
+
+paginate: 8
+paginate_path: "/posts/page:num/"
+repo: links
+rssfeed: feed.xml
