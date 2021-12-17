@@ -1,0 +1,81 @@
+<h3>kolom1</h3>
+<div class="klok"><span id="klokbalk"></span></div>
+<ul>
+<li><a href='index'><img  alt="-" class="lijst" src="assets/img/groen.gif">home</a></li>
+<li><a href='links'><img  alt="-" class="lijst" src="assets/img/groen.gif">links</a></li>
+<li><a href='markdown'><img  alt="-" class="lijst" src="assets/img/groen.gif">markdown</a></li>
+<li><a href='voorbeeld'><img  alt="-" class="lijst" src="assets/img/groen.gif">voorbeeld</a></li>
+<li><a href='nieuw'><img  alt="-" class="lijst" src="assets/img/groen.gif">nieuw</a></li>
+<li><a href='extra'><img  alt="-" class="lijst" src="assets/img/groen.gif">extra</a></li>
+<li><a href="//nl.wikipedia.org/wiki/Hoofdpagina" title="Wikipedia hoofdpagina" target="_blank">    <img  alt="-" class="lijst" src="assets/img/groen.gif">Wikipedia</a></li>
+</ul>
+
+
+<script>
+var Teller=null
+function toontijd () {
+var nu = new Date()
+var maand = nu.getMonth()
+if (maand == 0)
+maand = "Januari";
+else if (maand == 1)
+maand = "Februari";
+else if (maand == 2)
+maand = "Maart";
+else if (maand == 3)
+maand = "April";
+else if (maand == 4)
+maand = "Mei";
+else if (maand == 5)
+maand = "Juni";
+else if (maand == 6)
+maand = "Juli";
+else if (maand == 7)
+maand = "Augustus";
+else if (maand == 8)
+maand = "September";
+else if (maand == 9)
+maand = "Oktober";
+else if (maand == 10)
+maand = "November";
+else if (maand == 11)
+maand = "December";
+
+var datum = nu.getDate()
+
+var dag = nu.getDay()
+if (dag == 0)
+dag = "Zondag";
+else if (dag == 1)
+dag = "Maandag";
+else if (dag == 2)
+dag = "Dinsdag";
+else if (dag == 3)
+dag = "Woensdag";
+else if (dag == 4)
+dag = "Donderdag";
+else if (dag == 5)
+dag = "Vrijdag";
+else if (dag == 6)
+dag = "Zaterdag";
+var uren = nu.getHours()
+if (uren <=9)
+uren = "0"+uren
+var minuten = nu.getMinutes()
+if (minuten <=9)
+minuten = "0"+minuten
+var seconden = nu.getSeconds()
+if (seconden <=9)
+seconden = "0"+seconden
+var tijdWaarde = "" + dag
+tijdWaarde += "<br>" + datum
+tijdWaarde += " " + maand
+tijdWaarde += "<br>" + uren
+tijdWaarde += ":"+minuten
+tijdWaarde += ":"+seconden
+document.getElementById('klokbalk').innerHTML=tijdWaarde;
+teller =
+setTimeout("toontijd()",1000)
+}
+toontijd()
+</script>
